@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col">
+    <input
+      #termino
+      type="text"
+      name=""
+      id=""
+      class="form-control"
+      placeholder="Nuscar artista"
+      (keyup)="buscar(termino.value)"
+    />
+  </div>
+</div>
+
+<app-loading class="m-5" *ngIf="loading" ></app-loading>
+
+<app-tarjetas *ngIf="!loading" [items]="artistas"></app-tarjetas>
